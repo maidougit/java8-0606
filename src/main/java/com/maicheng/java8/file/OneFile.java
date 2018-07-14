@@ -1,5 +1,6 @@
 package com.maicheng.java8.file;
 
+import cn.hutool.core.lang.Console;
 import org.junit.Test;
 
 import java.io.File;
@@ -18,12 +19,11 @@ public class OneFile {
         File file = new File("E://demo.txt");
         if (file.exists()) {
 
-            System.out.println("文件删除成功：" + file.delete());
+            Console.log("文件删除成功：{}" , file.delete());
         } else {
-            System.out.println("文件创建成功：" + file.createNewFile());
+            Console.log("文件创建成功：{}" , file.createNewFile());
         }
 
-        // 使用 File.separator  代替
     }
 
     @Test

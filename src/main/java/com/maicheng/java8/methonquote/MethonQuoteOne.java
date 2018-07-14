@@ -6,7 +6,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * Copyright (C), 2017-2018, maicheng
  * FileName: MethonQuoteOne.java
  * Author:   hyz
  * Date:     2018-06-13 17:56
