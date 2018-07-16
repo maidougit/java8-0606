@@ -1,10 +1,15 @@
 package com.maicheng.java8;
 
+import cn.hutool.core.lang.Console;
+import lombok.Data;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Data
 public class Student {
 
     private String name;
@@ -19,28 +24,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+
+        return ToStringBuilder.reflectionToString(this);
     }
 
     public static void main(String[] args) {
@@ -56,7 +44,7 @@ public class Student {
 
         Map<String, List<Student>> result = list.stream().collect(Collectors.groupingBy(Student::getName));
 
-        System.out.println("结果---->" + result.toString());
+        Console.log("结果:{}" , result.toString());
 
     }
 }

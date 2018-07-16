@@ -1,4 +1,4 @@
-package com.maicheng.java8.refect;
+package com.maicheng.java8.reflect;
 
 /**
  * 方法的功能描述:反射
@@ -7,5 +7,5 @@ package com.maicheng.java8.refect;
  * @date:    2018-07-08 10:01-10:01
  * @since v1.8.0
  */
-public class OneRefact {
+public class OneRefectl {
 }

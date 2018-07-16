@@ -1,5 +1,6 @@
 package com.maicheng.java8.stream;
 
+import cn.hutool.core.lang.Console;
 import com.maicheng.java8.Employee;
 import com.maicheng.java8.Student;
 import jdk.nashorn.internal.runtime.options.Option;
@@ -15,9 +16,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * Copyright (C), 2017-2018, maicheng
  * FileName: StreamFirstOne.java
- * Author:   hyz
+ * Author:   maidou
  * Date:     2018-06-13 18:09
  * Description: stream 是数据渠道，用于操作数据源（集合，数组等）所生成的元素序列
  *  stream 自己不会存储元素
@@ -86,11 +87,11 @@ public class StreamFirstOne {
 
         Double resulyt = list.stream().collect(Collectors.averagingDouble(Student::getAge));
 
-        System.out.println("平均结果：" + sum);
+        Console.log("平均结果：{}" , sum);
 
         Optional<Student> max =  list.stream().collect(Collectors.maxBy((x1, x2) -> Integer.compare(x1.getAge(),x2.getAge())));
 
-        System.out.println("比较结果：" + max.get());
+        Console.log("比较结果：{}" , max.get());
     }
 
     //groupingby 分组

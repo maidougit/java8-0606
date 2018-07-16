@@ -1,12 +1,11 @@
 package com.maicheng.java8;
 
-import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * FileName: SingleMethod2Java8.java
- * Author:   hyz
+ * Author:   maidou
  * Date:     2018-06-06 23:33
  * Description: 简单的java8方式
  */

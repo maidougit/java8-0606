@@ -3,9 +3,9 @@ package com.maicheng.java8.optional;
 import java.util.Optional;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * Copyright (C), 2017-2018, maicheng
  * FileName: OneOptional.java
- * Author:   hyz
+ * Author:   maidou
  * Date:     2018-06-14 11:10
  * Description:
  */

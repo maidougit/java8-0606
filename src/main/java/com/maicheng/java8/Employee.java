@@ -15,16 +15,20 @@
  */
 package com.maicheng.java8;
 
+import lombok.Data;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import java.util.Objects;
 
 /**
  * Copyright (C), 2017-2018, springboot学习小组有限公司
  * FileName: Employee.java
- * Author:   麦兜
+ * Author:   maidou
  * Date:     2018-06-30 11:25
  * Description: 员工信息    
  */
 
+@Data
 public class Employee {
 
     private Integer id;
@@ -42,38 +46,6 @@ public class Employee {
         this.id = id;
         this.salary = salary;
         this.name = name;
-        this.age = age;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -96,11 +68,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", salary=" + salary +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+
+        return ToStringBuilder.reflectionToString(this);
     }
 }

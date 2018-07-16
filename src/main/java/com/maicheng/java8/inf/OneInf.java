@@ -2,7 +2,7 @@ package com.maicheng.java8.inf;
 
 /**
  * FileName: OneInf.java
- * Author:   hyz
+ * Author:   maidou
  * Date:     2018-06-14 10:26
  * Description:
  * 默认方法出现的原因是为了对原有接口的扩展，有了默认方法之后就不怕因改动原有的接口而对已经使用这些接口的程序造成的代码不兼容的影响。 在Java8中也对一些接口增加了一些默认方法，比如Map接口等等。一般来说，使用默认方法的场景有两个：可选方法和行为的多继承。
