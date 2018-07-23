@@ -16,7 +16,7 @@
 package com.maicheng.java8;
 
 import lombok.Data;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import java.util.Objects;
 
@@ -69,6 +69,6 @@ public class Employee {
     @Override
     public String toString() {
 
-        return ToStringBuilder.reflectionToString(this);
+        return ReflectionToStringBuilder.reflectionToString(this);
     }
 }

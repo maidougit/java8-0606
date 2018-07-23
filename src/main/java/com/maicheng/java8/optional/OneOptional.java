@@ -1,5 +1,7 @@
 package com.maicheng.java8.optional;
 
+import lombok.Data;
+
 import java.util.Optional;
 
 /**
@@ -9,8 +11,10 @@ import java.util.Optional;
  * Date:     2018-06-14 11:10
  * Description:
  */
+
 public class OneOptional {
 
+    @Data
     class User{
         private String name;
 
@@ -25,63 +29,17 @@ public class OneOptional {
 
         public User() {
         }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        public String getChampion() {
-            return Champion;
-        }
-
-        public void setChampion(String champion) {
-            Champion = champion;
-        }
     }
 
+    @Data
     class Competition{
         private CompResult result;
         private String name;
-
-        public CompResult getResult() {
-            return result;
-        }
-
-        public void setResult(CompResult result) {
-            this.result = result;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
     }
 
+    @Data
     class CompResult{
         private User champion;
-
-        public User getChampion() {
-            return champion;
-        }
-
-        public void setChampion(User champion) {
-            this.champion = champion;
-        }
     }
 
     public static void main(String[] args) {
