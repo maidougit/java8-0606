@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
  * FileName: LambdaDemo.java
  * Author:   lx
  * Date:     2018-07-21 11:40
