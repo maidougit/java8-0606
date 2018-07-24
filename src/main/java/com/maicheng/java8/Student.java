@@ -16,12 +16,35 @@ public class Student {
 
     private Integer age;
 
-    public Student() {
+    Student(String name, int age) {
+        Console.log("(默认)的构造方法 name:{},age:{} " , name, age);
     }
 
+    public Student() {
+        Console.log("---调用了公有、无参构造方法执行了---");
+    }
+
+    private Student(String name) {
+        Console.log("有一个参数构造：{}", name);
+    }
+
+    //受保护的构造方法
+    protected Student(boolean n) {
+        Console.log("受保护的构造方法 n={} " , n);
+    }
+
+    //私有构造方法
+    private Student(Integer age){
+        Console.log("私有的构造方法   年龄：{}", age);
+    }
+
+
+
+    //多参构造
     public Student(String name, Integer age) {
         this.name = name;
         this.age = age;
+        Console.log("name：{},age：{}", name, age);
     }
 
 

@@ -3,7 +3,6 @@ package com.maicheng.java8.stream;
 import cn.hutool.core.lang.Console;
 import com.maicheng.java8.Employee;
 import com.maicheng.java8.Student;
-import jdk.nashorn.internal.runtime.options.Option;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -64,7 +63,7 @@ public class StreamFirstOne {
         // 生成
         Stream.generate(() -> Math.random())
                 .limit(5)
-                .forEach(System.out::println);
+                .forEach(Console::log);
     }
 
     //规约计算 reduce ()
@@ -75,7 +74,7 @@ public class StreamFirstOne {
 
        Integer sum =  list.stream().reduce(0, (x, y) -> x+y);
 
-        System.out.println("计算结果：" + sum);
+        Console.log("计算结果：{}" , sum);
 
     }
 
@@ -138,7 +137,7 @@ public class StreamFirstOne {
         employees.stream()
                 .filter(e-> e.getSalary() > 12.12)
                 .limit(2)
-                .forEach(System.out::println);
+                .forEach(Console::log);
 
     }
 
@@ -150,7 +149,7 @@ public class StreamFirstOne {
         employees.stream()
                 .filter(e-> e.getSalary() > 12.12)
                 .distinct()
-                .forEach(System.out::println);
+                .forEach(Console::log);
     }
 
     /**

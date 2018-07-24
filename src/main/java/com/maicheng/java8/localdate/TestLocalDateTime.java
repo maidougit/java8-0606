@@ -1,14 +1,14 @@
-package com.maicheng.java8;
+package com.maicheng.java8.localdate;
 
 import org.junit.Test;
 
 import java.time.LocalDateTime;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * Copyright (C), 2017-2018, maicheng
  * FileName: TestLocalDateTime.java
- * Author:   hyz
- * Date:     2018-06-29 0:39
+ * Author:   maido
+ * Date:     2018/7/24 7:10
  * Description:
  */
 public class TestLocalDateTime {
