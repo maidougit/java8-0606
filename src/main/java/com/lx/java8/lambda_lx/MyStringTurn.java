@@ -1,4 +1,4 @@
-package com.maicheng.java8.lambda_lx;
+package com.lx.java8.lambda_lx;
 
 /**
  * FileName: MyStringTurn.java
