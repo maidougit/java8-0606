@@ -21,13 +21,13 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import java.util.Objects;
 
 /**
- * Copyright (C), 2017-2018, springboot学习小组有限公司
+ * Copyright (C), 2017-2018, maicheng
  * FileName: Employee.java
- * Author:   maidou
- * Date:     2018-06-30 11:25
- * Description: 员工信息    
+ * Author:   maido
+ * Date:     2018/7/25 14:13
+ * @return :         
+ * Description:     
  */
-
 @Data
 public class Employee {
 

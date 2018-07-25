@@ -1,11 +1,15 @@
 package com.lx.java8.lambda_lx;
 
+import lombok.Data;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * FileName: Employee.java
  * Author:   lx
  * Date:     2018-07-21 11:42
  * Description: 员工
  */
+@Data
 public class Employee {
 
     private String name;
@@ -24,37 +28,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public Double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
-                '}';
+
+        return ReflectionToStringBuilder.reflectionToString(this);
     }
 
 

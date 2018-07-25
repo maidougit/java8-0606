@@ -7,11 +7,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * Copyright (C), 2017-2018, maicheng
  * FileName: Sort2Java8.java
- * Author:   hyz
- * Date:     2018-06-06 23:38
- * Description:
+ * Author:   maido
+ * Date:     2018/7/25 14:14
+ * @return :         
+ * Description:     
  */
 public class Sort2Java8 {
 
