@@ -1,7 +1,7 @@
 package com.maicheng.java8.reflect;
 
 import cn.hutool.core.lang.Console;
-import com.maicheng.java8.Student;
+import com.maicheng.java8.model.Student;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
@@ -39,7 +39,7 @@ public class OneReflect {
         Console.log("第二种方式获取class名称：{}", stuClass2.getName());
 
         try {
-            Class stuClass3 = Class.forName("com.maicheng.java8.Student");
+            Class stuClass3 = Class.forName("com.maicheng.java8.model.Student");
             Console.log("第三种方式获取class名称：{}", stuClass3.getName());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -57,7 +57,7 @@ public class OneReflect {
      */
     @Test
     public void getAllConstructor() throws Exception{
-        Class stuClass = Class.forName("com.maicheng.java8.Student");
+        Class stuClass = Class.forName("com.maicheng.java8.model.Student");
         //所有共有构造
         Arrays.asList(stuClass.getConstructors()).stream().forEach(x->Console.log(x));
 
@@ -75,7 +75,7 @@ public class OneReflect {
      */
     @Test
     public void getAllConstructorContainsProtect() throws Exception{
-        Class stuClass = Class.forName("com.maicheng.java8.Student");
+        Class stuClass = Class.forName("com.maicheng.java8.model.Student");
 
         Arrays.asList(stuClass.getDeclaredConstructors()).stream().forEach(x->Console.log(x));
     }
@@ -91,7 +91,7 @@ public class OneReflect {
      */
     @Test
     public void getNotParamConstructor() throws Exception{
-        Class clazz = Class.forName("com.maicheng.java8.Student");
+        Class clazz = Class.forName("com.maicheng.java8.model.Student");
         Constructor con = clazz.getConstructor(null);
 
         Console.log("con:{}",con);

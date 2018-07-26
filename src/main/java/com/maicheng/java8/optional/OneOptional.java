@@ -1,6 +1,8 @@
 package com.maicheng.java8.optional;
 
+import cn.hutool.core.lang.Console;
 import lombok.Data;
+import org.junit.Test;
 
 import java.util.Optional;
 
@@ -42,19 +44,6 @@ public class OneOptional {
         private User champion;
     }
 
-    public static void main(String[] args) {
-        //创建Optional对象
-        Optional<String> opt = Optional.empty();
-
-        System.out.println("结果--->" + opt);
-
-        //依据一个非空值创建Optional
-        Optional<String> opt1 = Optional.of("hello");
-
-       //可接受null的Optional
-        Optional<String> opt2 = Optional.ofNullable(null);
-    }
-
     public static String getName(User u) {
         if (u == null)
             return "Unknown";
@@ -94,5 +83,23 @@ public class OneOptional {
                 .map(r->r.getChampion())
                 .map(u->u.getName())
                 .orElseThrow(()->new IllegalArgumentException("The value of param comp isn't available."));
+    }
+
+    @Test
+    public void test1() {
+        //创建Optional对象
+        Optional<String> opt = Optional.empty();
+
+        Console.log("结果---{}" , opt);
+
+        //依据一个非空值创建Optional
+        Optional<String> opt1 = Optional.of("hello");
+
+        Console.log("opt1：{}", opt1.get());
+
+        //可接受null的Optional
+        Optional<String> opt2 = Optional.ofNullable(null);
+
+        Console.log("opt2:{}", opt2.isPresent());
     }
 }

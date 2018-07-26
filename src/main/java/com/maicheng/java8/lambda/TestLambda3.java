@@ -9,11 +9,12 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * 描述:TODO
+ *
  * FileName: TestLambda3.java
- * Author:   hyz
- * Date:     2018-06-21 23:01
- * Description:
+ * @Author: maido
+ * @date:    2018/7/25
+ * @since v1.8.0
  */
 public class TestLambda3 {
 

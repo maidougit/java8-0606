@@ -6,11 +6,12 @@ import java.util.Comparator;
 import java.util.function.Consumer;
 
 /**
- * Copyright (C), 2017-2018, 上海阁为信息科技有限公司
+ * 描述:TODO
+ *
  * FileName: TestLambda2.java
- * Author:   hyz
- * Date:     2018-06-20 23:25
- * Description: lambda 中引入了一个新的操作符，高操作符成为箭头操作符
+ * @Author: maido
+ * @date:    2018/7/25
+ * @since v1.8.0
  */
 public class TestLambda2 {
 

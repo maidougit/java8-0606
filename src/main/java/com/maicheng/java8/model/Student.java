@@ -1,4 +1,4 @@
-package com.maicheng.java8;
+package com.maicheng.java8.model;
 
 import cn.hutool.core.lang.Console;
 import lombok.Data;

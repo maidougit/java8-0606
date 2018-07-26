@@ -1,12 +1,16 @@
 package com.maicheng.java8.predicate;
 
+import lombok.Data;
+
 /**
- * Copyright (C), 2017-2018, maicheng
+ * 描述:TODO
+ *
  * FileName: Apple.java
- * Author:   hyz
- * Date:     2018-06-13 17:34
- * Description:
+ * @Author: maido
+ * @date:    2018/7/25
+ * @since v1.8.0
  */
+@Data
 public class Apple {
 
     private int getWeight;
@@ -23,21 +27,5 @@ public class Apple {
     }
 
     public Apple() {
-    }
-
-    public int getGetWeight() {
-        return getWeight;
-    }
-
-    public void setGetWeight(int getWeight) {
-        this.getWeight = getWeight;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }

@@ -4,7 +4,7 @@ package com.maicheng.java8.predicate;
 /**
  * Copyright (C), 2017-2018, maicheng
  * FileName: PredicateOneTest.java
- * Author:   hyz
+ * Author:   maidou
  * Date:     2018-06-13 17:33
  * Description:
  */
