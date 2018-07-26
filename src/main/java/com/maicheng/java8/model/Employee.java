@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.maicheng.java8;
+package com.maicheng.java8.model;
 
 import lombok.Data;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;

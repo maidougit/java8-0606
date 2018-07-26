@@ -1,7 +1,7 @@
 package com.maicheng.java8.stream;
 
 import cn.hutool.core.lang.Console;
-import com.maicheng.java8.Employee;
+import com.maicheng.java8.model.Employee;
 import com.maicheng.java8.model.Student;
 import org.junit.Test;
 

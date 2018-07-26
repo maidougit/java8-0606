@@ -1,4 +1,4 @@
-package com.maicheng.java8;
+package com.maicheng.java8.util;
 
 import java.util.ArrayList;
 import java.util.List;

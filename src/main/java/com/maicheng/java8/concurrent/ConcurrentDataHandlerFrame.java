@@ -1,7 +1,7 @@
 package com.maicheng.java8.concurrent;
 
 import cn.hutool.core.lang.Console;
-import com.maicheng.java8.TaskUtil;
+import com.maicheng.java8.util.TaskUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;
