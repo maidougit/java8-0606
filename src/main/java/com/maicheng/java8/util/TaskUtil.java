@@ -24,6 +24,7 @@ public class TaskUtil {
 
         if (persize >= totalSize) {
             parts.add("0:" + totalSize);
+
             return parts;
         }
 
@@ -35,8 +36,10 @@ public class TaskUtil {
             if (end > totalSize) {
                 end = totalSize;
             }
+
             parts.add(start + ":" + end);
         }
+
         return parts;
     }
 
@@ -46,6 +49,7 @@ public class TaskUtil {
         if (end > allKeys.size()) {
             end = allKeys.size();
         }
+
         return allKeys.subList(start, end);
     }
 }

@@ -4,6 +4,7 @@ import cn.hutool.core.lang.Console;
 import org.junit.Test;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 描述: list 递归调用
@@ -17,6 +18,11 @@ public class ListUtil<T> extends LinkedList<T>{
 
     public ListUtil<T> append(T t) {
         add(t);
+        return this;
+    }
+
+    public ListUtil<T> append(List<T> t) {
+        addAll(t);
         return this;
     }
 

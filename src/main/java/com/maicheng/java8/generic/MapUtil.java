@@ -42,7 +42,7 @@ public class MapUtil<K, V> extends LinkedHashMap<K,V> {
     public void test() {
       MapUtil<String, String> mapUtil = new MapUtil<>();
 
-      mapUtil.push("name", "参数化").push("name1", "参数化");
+       mapUtil.push("name", "参数化").push("name1", "参数化");
 
         Console.log("结果：{}", mapUtil);
     }

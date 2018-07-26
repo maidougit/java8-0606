@@ -1,6 +1,7 @@
 package com.maicheng.java8.concurrent;
 
 import cn.hutool.core.lang.Console;
+import com.maicheng.java8.util.StreamUtil;
 import com.maicheng.java8.util.TaskUtil;
 import org.junit.Test;
 
@@ -11,6 +12,7 @@ import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutorCompletionService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 /**
  * 描述:TODO
@@ -87,9 +89,24 @@ public class ConcurrentDataHandlerFrame {
         }
     }
 
+    //优化 1
+    public List<Integer> getData1(List<String> keys) {
+
+        return keys.stream().map(key -> Integer.valueOf(key) % 1000000000).collect(Collectors.toList());
+    }
+
+    public List<Integer> getData2(List<String> keys) {
+
+        return StreamUtil.map(keys, key -> Integer.valueOf(key) % 1000000000);
+    }
+
+
+
     @Test
     public void test() {
         List<Integer> allData = getAllData(getKeys(), new GetTradeData());
         Console.log("结果：{}", allData);
     }
+
+
 }
