@@ -30,4 +30,5 @@ public class CatchUtil {
             throw new RuntimeException(e.getCause());
         }
     }
+
 }
