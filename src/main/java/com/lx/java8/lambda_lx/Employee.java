@@ -22,12 +22,20 @@ public class Employee {
     public Employee() {
     }
 
+    public Employee(Integer age) {
+        this.age = age;
+    }
+
     public Employee(String name, Integer age, Double salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
     }
 
+    public Employee(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
 
     @Override
     public String toString() {

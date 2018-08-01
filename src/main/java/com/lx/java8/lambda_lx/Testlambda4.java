@@ -19,9 +19,11 @@ package com.lx.java8.lambda_lx;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
@@ -60,7 +62,7 @@ public class Testlambda4 {
 
     /**
      * Supplier<T>：供给型接口
-     *     T get();
+     * T get();
      */
     @Test
     public void test2() {
@@ -76,7 +78,7 @@ public class Testlambda4 {
 
     /**
      * Function<T, R>：函数型接口
-     *     R apply(T t);
+     * R apply(T t);
      */
     @Test
     public void test3() {
@@ -84,6 +86,23 @@ public class Testlambda4 {
         System.out.println(trimStr);
     }
 
+    // 将符合条件的字符串，放入集合中去；用断言型接口
+    public List<String> filterStr(List<String> list, Predicate<String> pre) {
+        List<String> strList = new ArrayList<>();
+        for (String str : list) {
+            if (pre.test(str)) {
+                strList.add(str);
+            }
+        }
 
+        return strList;
+    }
+
+    @Test
+    public void test4() {
+        List<String> list = Arrays.asList("hello", "how", "what", "get");
+        List<String> listNew = filterStr(list, str -> str.contains("h"));
+        listNew.stream().forEach(System.out::println);
+    }
 
 }
