@@ -17,7 +17,7 @@ public class TaskUtil {
     }
 
     public static List<String> divide(int totalSize, int persize) {
-        List<String> parts = new ArrayList<String>();
+        List<String> parts = new ArrayList<>();
         if (totalSize <= 0 || persize <= 0) {
             return parts;
         }
