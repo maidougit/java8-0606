@@ -18,6 +18,8 @@ public class Employee {
 
     private Double salary;
 
+    private Status status;
+
 
     public Employee() {
     }
@@ -37,11 +39,24 @@ public class Employee {
         this.age = age;
     }
 
+    public Employee(String name, Integer age, Double salary, Status status) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        this.status = status;
+    }
+
     @Override
     public String toString() {
 
         return ReflectionToStringBuilder.reflectionToString(this);
     }
 
+    public enum Status {
+        FREE,
+        BUSY,
+        VOCATION,
+        FIRED;
+    }
 
 }

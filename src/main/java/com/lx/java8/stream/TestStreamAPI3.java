@@ -47,10 +47,17 @@ public class TestStreamAPI3 {
                 .map(Employee::getSalary)
                 .forEach(System.out::println);
 
-        Stream<Stream<Character>> stream = list.stream().map(TestStreamAPI3::filterCharacter);
+        Stream<Stream<Character>> stream = list.stream().map(TestStreamAPI3::filterCharacter); // {{a, a, a}, {b, b, b}}
         stream.forEach(sm -> {
             sm.forEach(System.out::println);
         });
+
+        System.out.println("--------");
+
+        Stream<Character> sm2 = list.stream().flatMap(TestStreamAPI3::filterCharacter); // {a, a, a, b, b, b}
+        sm2.forEach(System.out::println);
+
+
     }
 
     public static Stream<Character> filterCharacter(String str) {
@@ -63,5 +70,14 @@ public class TestStreamAPI3 {
         return list.stream();
     }
 
+
+    @Test
+    public void test6() {
+        for (Employee employee : listOrigin) {
+            employee.setName("干嘛都@我？");
+        }
+
+        listOrigin.forEach(System.out::println);
+    }
 
 }
