@@ -1,0 +1,10 @@
+# 话题流程
+
+1. mysql and oracle
+2. java基础 及 集合框架 
+3. spring 
+4. mybatis mybatis-plus hibernate 
+5. web 性能优化
+6. redis and nginx
+7. 微服务 and webservice and soa
+8. 分布式服务 dubbo zk   
