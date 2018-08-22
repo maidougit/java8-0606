@@ -8,4 +8,5 @@
 6. redis and nginx
 7. 并发线程(案例 导入)
 8. 微服务 and webservice and soa
-9. 分布式服务 dubbo zk   
+9. 分布式服务 dubbo zk  
+10. js基础(闭包等) 
