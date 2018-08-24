@@ -115,7 +115,7 @@ public class MapUtil<K, V> extends LinkedHashMap<K,V> {
 }
 ```
 
-## 并发线程 CurrentHashMap的使用 与 HashMap区别
+## 并发线程 ConcurrentHashMap的使用 与 HashMap区别
 
 ## Set集合的使用
 
