@@ -46,6 +46,12 @@
             <version>3.3.1</version>
         </dependency>
         <!--二维码生成工具 end-->
+
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>3.6.5</version>
+        </dependency>
     </dependencies>
 
     <build>
