@@ -3,6 +3,8 @@ package com.maicheng.java8.localdate;
 import cn.hutool.core.lang.Console;
 import org.junit.Test;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.DayOfWeek;
 import java.time.Instant;
@@ -14,6 +16,9 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -111,6 +116,97 @@ public class TestLocalDateTime {
         String string = formatter.format(parsed);
 
         Console.log("结果：{}", string);     // Nov 03, 2014 - 07:13
-
     }
+
+    @Test
+    public void testJsSj() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Calendar c = Calendar.getInstance();
+
+        c.setTime(new Date());
+        c.add(Calendar.DATE, - 7);
+        Date d = c.getTime();
+        String day = format.format(d);
+        System.out.println("过去七天："+day);
+    }
+
+
+    @Test
+    public void getWeekStartTime() throws Exception{
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat( "yyyyMMdd", Locale. getDefault());
+        Calendar cal = Calendar.getInstance();
+        int day_of_week = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        if (day_of_week == 0 ) {
+            day_of_week = 7 ;
+        }
+        cal.add(Calendar.DATE , -day_of_week + 1 );
+        System.out.println("---->" + simpleDateFormat.format(cal.getTime()) + "000000000");
+    }
+
+    @Test
+    public void getWeekFirst() {
+
+        LocalDate inputDate = LocalDate.parse("2018-09-12");
+        TemporalAdjuster FIRST_OF_WEEK = TemporalAdjusters.ofDateAdjuster(
+                localDate -> localDate.minusDays(localDate.getDayOfWeek().getValue()-DayOfWeek.MONDAY.getValue()));
+        System.out.println(inputDate.with(FIRST_OF_WEEK));
+        TemporalAdjuster LAST_OF_WEEK = TemporalAdjusters.ofDateAdjuster(
+                localDate -> localDate.plusDays(DayOfWeek.SUNDAY.getValue() - localDate.getDayOfWeek().getValue()));
+        System.out.println(inputDate.with(LAST_OF_WEEK));
+    }
+
+    @Test
+    public void getMonthFirst() {
+
+        LocalDate inputDate = LocalDate.parse("2018-09-12");
+        TemporalAdjuster FIRST_OF_WEEK = TemporalAdjusters.ofDateAdjuster(
+                localDate -> localDate.minusMonths(localDate.getDayOfMonth()-DayOfWeek.MONDAY.getValue()));
+        System.out.println(inputDate.with(FIRST_OF_WEEK));
+        TemporalAdjuster LAST_OF_WEEK = TemporalAdjusters.ofDateAdjuster(
+                localDate -> localDate.plusMonths(DayOfWeek.SUNDAY.getValue() - localDate.getDayOfWeek().getValue()));
+        System.out.println(inputDate.with(LAST_OF_WEEK));
+    }
+
+    @Test
+    public void getWeekByDay() {
+        LocalDate today = LocalDate.parse("2018-09-12");
+        //本月的第一天
+        LocalDate firstday = LocalDate.of(today.getYear(),today.getMonth().minus(1),1);
+        //本月的最后一天
+        LocalDate lastDay =today.minusMonths(1).with(TemporalAdjusters.lastDayOfMonth());
+        System.out.println("本月的第一天"+firstday);
+        System.out.println("本月的最后一天"+lastDay);
+    }
+
+    @Test
+    public void getWeek() {
+        String today = "2013-01-14";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try{
+           date = format.parse(today);
+        } catch (ParseException e){
+           e.printStackTrace();
+        }
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setFirstDayOfWeek(Calendar.MONDAY);
+        calendar.setTime(date);
+        System.out.println(calendar.get(Calendar.WEEK_OF_YEAR));
+    }
+
+    public void getDay() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, 2016); // 2016年
+        cal.set(Calendar.WEEK_OF_YEAR, 10); // 设置为2016年的第10周
+        cal.set(Calendar.DAY_OF_WEEK, 2); // 1表示周日，2表示周一，7表示周六
+        Date date = cal.getTime();
+    }
+
+ /*   public void getEndDay() {
+
+        LocalDate now = LocalDate.now();
+        LocalDate lastDayOfPreviousMonth = now.minusMonths(1).dayOfMonth().withMaximumValue();
+    }*/
+
 }

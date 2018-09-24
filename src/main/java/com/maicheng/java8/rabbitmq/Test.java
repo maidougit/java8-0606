@@ -13,11 +13,11 @@ import java.util.HashMap;
 public class Test {
     public Test() throws Exception{
 
-        QueueConsumer consumer = new QueueConsumer("queue");
+        QueueConsumer consumer = new QueueConsumer("queueFirst");
         Thread consumerThread = new Thread(consumer);
         consumerThread.start();
 
-        Producer producer = new Producer("queue");
+        Producer producer = new Producer("queueFirst");
 
         for (int i = 0; i < 10; i++) {
             HashMap message = new HashMap();
@@ -29,5 +29,6 @@ public class Test {
 
     public static void main(String[] args) throws Exception{
         new Test();
+        //QueueConsumer consumer = new QueueConsumer("queue");
     }
 }
